@@ -87,3 +87,6 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+sync:
+	rsync -avz --delete -e ssh build/html/ yosuke@openhri.net:/home/yosuke/openhri.net/doc

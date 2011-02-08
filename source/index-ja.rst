@@ -3,30 +3,24 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OpenHRI Manual
-==============
+OpenHRIマニュアル
+=================
 
-
-Manual in other languages:
-
-.. toctree::
-   :maxdepth: 1
-
-   index-ja
+English document is :doc:`here<index>`
 
 Contents:
 
 .. toctree::
    :maxdepth: 3
 
-   intro
-   tutorial/index
-   workingwithgrammar
-   scriptingdialogmanager
-   openhriaudio
-   openhrivoice
-   seatsat
-   examples
+   intro-ja
+   tutorial/index-ja
+   workingwithgrammar-ja
+   scriptingdialogmanager-ja
+   openhriaudio-ja
+   openhrivoice-ja
+   seatsat-ja
+   examples-ja
 
 
 .. Indices and tables
