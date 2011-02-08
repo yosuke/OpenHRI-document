@@ -1,8 +1,8 @@
---------------
-Step1: Install
---------------
+-------------------
+Step1: インストール
+-------------------
 
-Here, we explain installation procedure for each platforms:
+ここでは、プラットホームごとのOpenHRIのインストール方法を説明します。:
 
 .. toctree::
    :maxdepth: 1
@@ -10,4 +10,4 @@ Here, we explain installation procedure for each platforms:
    install-windows-ja
    install-ubuntu-ja
 
-If you have already done with the procedure, please proceed to :doc:`step2-ja`.
+インストールが完了しましたら、次へ進んでください。 :doc:`step2-ja`.
