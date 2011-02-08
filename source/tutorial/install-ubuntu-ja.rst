@@ -17,9 +17,9 @@ OpenHRIソフトウェアのリポジトリを登録しておくことで、Syna
 
 3. 「＋追加」をクリックし、「APT line:」に以下のアドレス::
 
-deb http://ppa.launchpad.net/openhri/ppa/ubuntu lucid main
+     deb http://ppa.launchpad.net/openhri/ppa/ubuntu lucid main
 
- を入力して「ソースの追加（A）」をクリックします。
+  を入力して「ソースの追加（A）」をクリックします。
 
    .. image:: inst1.png
 
