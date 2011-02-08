@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seatml>
+  <general name="sample">
+    <agent name="speechin" type="rtcin" datatype="TimedString" />
+    <agent name="speechout" type="rtcout" datatype="TimedString" />
+    <agent name="commandout" type="rtcout" datatype="TimedString" />
+  </general>
+  <state name="OPEN">
+    <rule>
+      <key>hello</key>
+      <command host="speechout">hello</command>
+      <command host="commandout">command-hello</command>
+    </rule>
+    <rule>
+      <key>bye</key>
+      <command host="speechout">bye bye</command>
+      <command host="commandout">command-bye</command>
+    </rule>
+  </state>
+</seatml>
