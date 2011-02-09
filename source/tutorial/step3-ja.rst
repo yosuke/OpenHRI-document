@@ -1,71 +1,71 @@
-----------------------------------------
-Step3: Testing Voice Synthesis Component
-----------------------------------------
+-------------------------------------
+Step3: 音声合成コンポーネントのテスト
+-------------------------------------
 
-Here we will learn how to use text-to-speech component.
+ここでは、音声合成コンポーネントの使い方を学びます。
 
-Preparation
------------
+準備
+----
 
-1. Preparation of test components
+1. テスト用コンポーネントの準備
 
-  Test component will output a text data in some period. Please create a test program as follows.
+  定期的にテキストデータを出力するコンポーネントを用意します。以下のようなテストプログラムを作成して下さい。
 
   .. literalinclude:: ConsoleIn.py
 
-  We will call this component “ConsoleIn component” hereafter..
+  以後、このテスト用コンポーネントをConsoleInコンポーネントと呼称します。
 
-2. Prepare the rtc.conf
+2. rtc.confの用意
 
-  You may copy the setting used in :doc:`step2`.
+  Step2で使用したものと同等の設定ファイルを用意します。 :doc:`step2`.
 
-Test procedures
----------------
+テスト手順
+----------
 
-1. Start the ConsoleIn and Festival components.
+1. ConsoleInコンポーネント、OpenJTalkコンポーネントを起動します。
 
-  Open a Terminal and enter each commands
+  ターミナルを開き、以下のコマンドを入力します。
   ::
 
   % python ConssoleIn.py
   
   ::
   
-  % festivalrtc
+  % openjtalkrtc
 
-  Make sure you start naming service view component is displayed.
+  RT SystemEditorのネームサービスビューに起動したコンポーネントが表示されていることを確認します。
 
   .. image:: ss_jtalk01.png
 
-2. Place the ConsoleIn and Festival component to RT System Editor.
+2. RT System EditorにConsoleInコンポーネント、OpenJTalkコンポーネントを配置します。
 
-  Drag and drop the components to the editor panel.
+  ドラッグ＆ドロップでエディタに配置します。
 
   .. image:: ss_jtalk02.png
 
-3. Remove the links between AudioInput-AudioOutput.
+3. AudioInput-AudioOutput間のリンクを削除します。
 
-  Select the link and choose "Delete" from the right-click menu.
+  リンクを選択してDeleteキーまたは右クリックメニューから"Delete"を選ぶと、リンクが削除されます。
 
   .. image:: ss_jtalk03.png
 
-4. Connect the ConsoleIn, Festival, and AudioOutput, respectively.
+4. ConsoleIn、OpenJTalk、AudioOutputをそれぞれ接続します。
 
-  * Connect ConsoleIn output port and Festival input port.
+  * ConsoleInの出力ポートとOpenJTalkの入力ポートを接続します。
 
-  * Connect the Festival “result” output port  and AudioOutput input port.
+  * OpenJTalkの出力ポート「result」とAudioOutputの入力ポートを接続します。
 
-  (Please be careful not to connect to the different port. )
+  (違うポートに接続しないように注意して下さい。)
 
   .. image:: ss_jtalk04.png
 
-5. Activate and verify the behavior.
+5. アクティブ化して動作を確認します。
 
-  Press "All Activate" button to activate all the components.
+  "All Activate" ボタンを押してで全コンポーネントをアクティブ化します。
 
-  Verify the text you set the ConsoleIn component is synthesized as audio.
+  ConsoleInコンポーネントに設定した文が音声として出力されることを確認してください。
 
-In the next step, we will create a complete dialog system by connecting the speech recognition component.
+次は、音声認識コンポーネントと接続することで簡単な対話システムを作ってみましょう。
 
 Proceed to :doc:`step4`.
 
