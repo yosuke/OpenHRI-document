@@ -1,49 +1,50 @@
----------------------------------
-Installation procedure for Ubuntu
----------------------------------
+----------------------
+Ubuntuへのインストール
+----------------------
 
-Installation of pre-built packages:
+ビルド済みパッケージのインストール方法：
 
-OpenHRI software repository can be registered using the Synaptic Package Manager.
+OpenHRIソフトウェアのリポジトリを登録しておくことで、Synapticパッケージマネージャで最新のソフトウェアが導入ができるようになります。
 
-1. Open the "Synaptic Package Manager" from "System" > "Systems Management". (Password required)
 
-2. Follow "Setting (S)" > "Open Repository (R)" > "Other Software" (or "Third-party Software") tab.
+1. 「システム」＞「システム管理」＞「Synapticパッケージ・マネージャ」を開きます。（パスワード入力あり）
+
+2. 「設定（S)」＞「リポジトリ（R）」を開き、「他のソフトウェア」(または「サードパーティのソフトウェア」)タブを開きます。
 
    .. image:: ss-inst02b.png
 
    .. image:: ss-inst03b.png
 
-3. Click "APT line:" and add the following address::
+3. 「＋追加」をクリックし、「APT line:」に以下のアドレス::
 
-     http://ppa.launchpad.net/openhri/ppa/ubuntu lucid main deb
+     deb http://ppa.launchpad.net/openhri/ppa/ubuntu lucid main
 
-   Click "Add source (A)".
+  を入力して「ソースの追加（A）」をクリックします。
 
    .. image:: inst1.png
 
-   .. note:: this address is for ubuntu 10. 04. OpenHRI binary packages currently only support ubuntu 10.04.
+   .. note:: 上記のアドレスはubuntu 10.04の場合です。OpenHRIはバイナリパッケージとして現在ubuntu 10.04のみをサポートしています。
 
-4. Click "Reload" to download the package information.
+4. 左上にある「再読み込み」をクリックしてパッケージ情報をダウンロードします。
 
    .. image:: inst3.png
 
-Repository registration is finished. Let’s install OpenHRI components.
+以上の操作でリポジトリの登録が完了しました。続けて音声コンポーネントのインストールを行いましょう。
 
-5. Select the items by using the quick search box. Enter "openhriaudio", "openhrivoice", "seatsat" on the search box.  Use the right-click menu to install.
+5. クイック検索欄や検索ウィンドウ（検索ボタンを押すと現れる）を利用して、パッケージ名”openhriaudio”、”openhrivoice”、”seatsat”を検索して現れた項目を選び、右クリックメニューのインストール指定をクリックします。
 
-   Quick search box
+   クイック検索
 
    .. image:: inst9.png
 
-   Right click the left check box and choose "install".
+   検索したパッケージを選び、右クリックメニューから「インストール指定」を選ぶと、パッケージ名左のチェックボックスに印がつく。
 
    .. image:: inst10.png
 
-   Click the "apply" button to begin the installation.
+   チェックしたのち、「適用」ボタンをクリックしてインストールを開始します。
 
    .. image:: inst11.png
 
-Component installation now finished. Let's check the behavior of the component.
+以上でコンポーネントのインストールが完了しました。続いてコンポーネントの動作を確認しましょう。
 
-Proceed to :doc:`step2`.
+ :doc:`step2`.

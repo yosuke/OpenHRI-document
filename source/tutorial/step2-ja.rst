@@ -1,49 +1,52 @@
-------------------------------------------------------------------
-Step2: Basic Usage of RT-SystemEditor and Testing Audio Components
-------------------------------------------------------------------
+---------------------------------------------------------------
+Step2: RTSystemEditorの使い方と音声入出力コンポーネントのテスト
+---------------------------------------------------------------
 
-In this step, we will directly connect the audio input and the audio output component and verify that the components are working properly.
+このステップでは、オーディオコンポーネントの動作テストを行います。
 
-Preparation
------------
+音声入力コンポーネントと音声出力コンポーネントを直接つないで、オーディオコンポーネントが正常に動作していることを確認します。
 
-1. Download and install eclipse with RT-SystemEditor (please see here for the instructions).
+準備
+----
 
-2. Prepare a microphone and a speaker (earphone and headphone) connect to PC.
+1. RT System Editorがインストールされたeclipseをダウンロードしてインストールします。(こちら http://www.openrtm.org/ を参照して下さい)
 
-3. Create rtc.conf file.
+2. マイクとスピーカ（イヤホン、ヘッドフォン）を用意し、PCと接続します。
 
-  Create a configuration file “rtc.conf” and save to working directory. Content of rtc.conf is as follows
+3. rtc.confファイルを作成します。
+
+  RTCコンフィギュレーションファイル “rtc.conf” を作成します。作業ディレクトリ に、次のような内容のテキストファイル“rtc.conf” を作成し配置してください。
 
   .. code-block:: guess  
 
      corba.nameservers: localhost:9876
      naming.formats: %n.rtc
 
-4. Launch the name server.
+4. ネームサーバーを立ち上げます。
 
-  Start the name server with port number as specified in rtc.conf file. (In the above example 9876)
+  rtc.confファイルでポートナンバーを指定したときは、指定したポートナンバーでネームサーバーを起動します。（上記の例なら9876）
   ::
   
   $ rtm-naming 9876
 
    .. image:: ss_run011.png
 
-5. Launch eclipse with RT-SystemEditor installed.
+5. RT System Editorを立ち上げます。
 
-Basic usage of the RT System Editor
------------------------------------
+RT System Editorの基本的な使い方
+--------------------------------
 
-In this section, we describes the basic usage of the RT System Editor and test audio components.
+音声入出力コンポーネントの起動とRT System Editorの基本的な使用方法を説明します。
 
-1. Launch AudioInput and AudioOutput components.
+1. AudioInputコンポーネントおよびAudioOutputコンポーネントを立ち上げます。
 
    .. warning::
    
-      If you are using ubuntu 9.10 or later, please use PulseAudioInput and PulseAudioOutput components.
-      If you are using version older than 9.10, please use PortAudioInput and PortAudioOutput components.
+      Ubuntuで使用する場合Uubuntuのバージョンにより立ち上げるコンポーネントを変更します。
+      Ubuntu9.10以降はPulseAudioInput、PulseAudioOutputコンポーネントを使用します。
+      それ以前のバージョンではPortAudioInput、PortAudioOutputコンポーネントを使用します。
 
-   ubuntu9.10 or later: enter the following commands on each terminal.
+   Ubuntu9.10以降の場合：端末上より以下のコマンドを入力してください。
      ::
  
      $ pulseaudioinput
@@ -52,7 +55,7 @@ In this section, we describes the basic usage of the RT System Editor and test a
      
      $ pulseaudiooutput
 
-   older version: enter the following commands on each terminal.
+   それ以前のバージョンの場合：端末上より以下のコマンドを入力してください。
      ::
 
      $ portaudioinput
@@ -61,63 +64,63 @@ In this section, we describes the basic usage of the RT System Editor and test a
      
      $ portaudiooutput
 
-2. Open the eclipse RT-SystemEditor perspective.
+2. RT System Editorを開きます。
 
    .. image:: ss_run03.png
 
    .. image:: ss_run04.png
 
-3. Select "Add name servers" button and register the name servers specified by the rtc.conf file.
+3. ネームサービス内の「ネームサーバーを追加」を選択してrtc.confファイルで指定したネームサーバーを登録します。
 
-   (In above example "localhost:9876")
+   （上記の例なら　localhost:9876）
 
    .. image:: step2_6.png
 
    .. image:: step2_7.png
 
-4. Click the icon on the left to open the new editor screen.
+4. 左上のアイコンをクリックし新規エディタ画面を開きます。
 
    .. image:: ss_step2_3.png
 
-5. From the name service views (left panel) drag and drop the AudioInput (and AudioOutput) component to the editor screen.
+5. ネームサービスビュー（左のパネル）のAudioInput（およびAudioOutput）をエディタ画面にドラッグ＆ドロップして配置します。
 
    .. image:: ss_run06.png
 
-6. Connected the dataport between the components.
+6. 配置したコンポーネントのデータポート同士を接続します。
 
-   Click the connector part of the data port.
+   データポートのコネクタ部分をクリックして、
 
    .. image:: ss_run09.png
 
-   Drag to the other data port.
+   そのままもう一方の端子までドラッグします。
 
    .. image:: ss_run10.png
 
-   When you drop the link, a connection settings dialog will appear. No configuration change is required.
+   ドロップすると接続設定ダイアログが出現します。設定は変更しません。
 
    .. image:: ss_run11.png
 
-   Press OK (connector changes to green color)
+   OKボタンを押すと接続されます。（コネクタの色が緑に変化します）
 
    .. image:: ss_run12.png
 
-Activate the component and check the operation
-----------------------------------------------
+コンポーネントのアクティブ化と動作確認
+--------------------------------------
 
-7. Activate all components.
+7. RTCをアクティブ状態にします。
 
-   Press “All Activate” button.
+  “All Activate” ボタンを押して、すべてのRTCコンポーネントをアクティブ状態に遷移させます。
 
    .. image:: ss_step2_1.png
 
-   AudioInput and AudioOutput activate and change from blue to green.
+   AudioInputとAudioOutputがアクティブ化し、オブジェクトの色が青から緑に変化します。
 
    .. image:: ss_step2_2.png
 
-8. Verify the operation.
+8. 動作を確認します。
 
-   Verify that sound input entered from the microphone is played from speakers.
+   マイクに音声を入力してスピーカに音声が流れることを確認します。
 
-In this step we have learned basic usage of the RT System Editor through testing the audio components.
+Step２ではオーディオコンポーネントのテストからRT System Editorの基本的な使用方法を説明しました。
 
 Proceed to :doc:`step3`.

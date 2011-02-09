@@ -1,29 +1,47 @@
-----------------------------------
-Installation procedure for Windows
-----------------------------------
+-----------------------
+Windowsへのインストール
+-----------------------
 
-Download and execute the installer from following URL.
+インストーラを以下のURLよりダウンロード・実行してください。
 
 http://openhri.net/getinstaller.php
 
-When the installer is executed, the installation wizard will start. Each package will be automatically downloaded and installed by the installer.
+インストーラを実行するとウィザードが起動し必要なパッケージを順次ダウンロード・インストールします。
 
-The case of OpenHRIAudio is shown as follows. Install OpenHRIVoice and SEATSAT similarly.
+OpenHRIAudioの場合を以下に示します。OpenHRIVoice、SEATSATも同様にインストールしてください。
 
-1. Select "English" and push the [OK] button.
+1. 言語を選びます。”Japanese”を選択して[OK]ボタンを押してください。
 
-2. The wizard starts. Push [Next (N)].
+   .. image:: wininst01.png
 
-3. The licensing policy is displayed. Push [Agree (A)].
+2. ウィザードが起動します。[次へ(N)]のボタンを押してください。
 
-4. The component selection screen is displayed. Please check everything and push [Next (N)].
+   .. image:: wininst02.png
 
-5. Select the installation location. Default is installed in "C:\Program Files\OpenHRIAudio".
+3. ライセンス契約書が表示されます。[同意する(A)]のボタンを押してください。
 
-6. The installation is being executed. Push [Next (N)] when the installation is completed.
+   .. image:: wininst03.png
 
-7. The installation was completed. Push [Finish (F)] button.
+4. コンポーネント選択画面が表示されます。すべてチェックして[次へ(N)]のボタンを押してください。
 
-After you have installed all packages (OpenHRIAudio, OpenHRIVoice and SEATSAT), let's proceed to confirm the operation of the components.
+   .. image:: wininst04.png
 
-Proceed to :doc:`step2`.
+5. インストール場所の選択です。デフォルトは”C:\Program Files\OpenHRIAudio”にインストールされます。
+
+   インストール場所を変更する場合は[参照(R)]ボタンを押してインストールする場所を指定してください。
+
+   インストール場所に問題がなければ[インストール]ボタンを押してインストールが開始されます。
+
+   .. image:: wininst05.png
+
+6. インストール実行中です。インストールが完了したら[次へ(N)]のボタンを押してください。
+
+   .. image:: wininst06.png
+
+7. インストールが完了しました。[完了(F)]ボタンを押してください。
+
+   .. image:: wininst07.png
+
+OpenHRIAudio・OpenHRIVoice・SEATSATのすべてのパッケージのインストールが完了したら、続いてコンポーネントの動作を確認しましょう。
+
+ :doc:`step2`.
