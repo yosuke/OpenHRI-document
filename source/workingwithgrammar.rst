@@ -82,7 +82,7 @@ You can use the validation tool by simply entering the following command::
   
   $ validatesrgs [grammarfile]
 
-If the grammar is collect, you will get the following output::
+If the grammar is correct, you will get the following output::
   
   $ validatesrgs sample-en.grxml
   Validating SRGS file sample-en.grxml...
@@ -90,7 +90,7 @@ If the grammar is collect, you will get the following output::
   Validating PLS file sample-lex-en.xml...
   PLS file is valid.
 
-If the grammar is not collect, you will get error messages for example as follows::
+If the grammar is not correct, you will get error messages for example as follows::
 
   $ validatesrgs sample-invalid.grxml
   Validating SRGS file sample-invalid.grxml...
