@@ -6,13 +6,13 @@ OpenHRIVoiceパッケージ
 コンポーネント
 -----------------------------------
 
-.. include:: ../../OpenHRIVoice/doc/juliusrtc.rst
+.. include:: ../../OpenHRIVoice/doc/juliusrtc-ja.rst
 
-.. include:: ../../OpenHRIVoice/doc/festivalrtc.rst
+.. include:: ../../OpenHRIVoice/doc/festivalrtc-ja.rst
 
-.. include:: ../../OpenHRIVoice/doc/openjtalkrtc.rst
+.. include:: ../../OpenHRIVoice/doc/openjtalkrtc-ja.rst
 
-.. include:: ../../OpenHRIVoice/doc/xsltrtc.rst
+.. include:: ../../OpenHRIVoice/doc/xsltrtc-ja.rst
 
 -----------------------------------
 ユーティリティスクリプト
