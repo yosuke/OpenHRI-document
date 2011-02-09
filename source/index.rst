@@ -6,7 +6,6 @@
 OpenHRI Manual
 ==============
 
-
 Manual in other languages:
 
 .. toctree::
