@@ -1,33 +1,36 @@
-----------------------------------
-Step5: Extending the Dialog System
-----------------------------------
+-------------------------------------
+Step5: 対話システムを外部に接続しよう
+-------------------------------------
 
-Here, we connect our dialog system to the external components.
+対話システムを外部のコンポーネントに接続してみましょう。
 
-Edit the script given to the dialog manager as follows.
+対話マネージャへ与えるスクリプトを以下のように編集してください。
+
   
-  sample-en2.seatml	   
+  sample2.seatml	   
 
-  .. literalinclude:: sample-en2.seatml
+  .. literalinclude:: sample2.seatml
 
-Stop the SEAT components (by entering Ctrl + C in the terminal) and start again with the edited script.
-
+SEATコンポーネントを起動している端末をCtrl+Cなどで停止させて、編集したスクリプトファイルを引数に与えて再度起動します。
   ::
 
-  % seat sample-en2.seatml
+  % seat sample2.seatml
 
-Dialog manager starts with one more output ports.
+再起動した対話マネージャは出力ポートがひとつ増えています。
 
   .. image:: step5_02.png
 
-You can give command to external components by connecting to this port.
+このポートに外部のコンポーネントを接続することで、対話システムからコマンドを出すことができるようになります。
 
-For example, we can connect the components shown in the following script.
+例えば、以下のスクリプトに示されるコンポーネントを接続してみましょう。
+
 
   ConsoleOut.py	   
 
   .. literalinclude:: ConsoleOut.py
 
-This component shows the command to the terminal. Please check the received commands, by saying "Hello" "Bye" to the microphone.
+このコンポーネントは受け取ったコマンドを端末に表示します。マイクに「こんにちは」「さようなら」と発話することで、音声による応答があると同時に、スクリプトに追加したコマンドが表示されるか確認して下さい。
 
-By editing the script given to the dialog manager, you can create a port you like and send data of any type. By using this feature, for example, you can connect the dialog system to the actual robot to send command "moving forward" or "retreat".
+対話マネージャへのスクリプトを変更することにより、応答メッセージの追加はもちろん、任意のデータタイプのポートを作成し情報を送出できます。この機能を用いることで、例えば外部の車輪型機構コントローラに接続し、「前進」「後退」などの台詞でコントロールするといったことが実現できます。
+
+
