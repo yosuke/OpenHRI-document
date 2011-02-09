@@ -44,4 +44,4 @@ OpenHRIAudioの場合を以下に示します。OpenHRIVoice、SEATSATも同様�
 
 OpenHRIAudio・OpenHRIVoice・SEATSATのすべてのパッケージのインストールが完了したら、続いてコンポーネントの動作を確認しましょう。
 
- :doc:`step2`.
+:doc:`step2-ja` へ

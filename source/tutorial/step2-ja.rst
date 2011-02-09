@@ -123,4 +123,4 @@ RT System Editorの基本的な使い方
 
 Step２ではオーディオコンポーネントのテストからRT System Editorの基本的な使用方法を説明しました。
 
-Proceed to :doc:`step3`.
+:doc:`step3-ja` へ
