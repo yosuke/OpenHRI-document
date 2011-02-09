@@ -13,13 +13,13 @@ Step4: 対話システムを作ろう
 
   以下のような２つのテキストデータを作成して下さい。テキストデータの文字コードはUTF-8を使用します。
 
-  sample-en.xml
+  sample.xml
 
-  .. literalinclude:: sample-en.xml
+  .. literalinclude:: sample.xml
 
-  sample-lex-en.xml
+  sample-lex.xml
 
-  .. literalinclude:: sample-lex-en.xml
+  .. literalinclude:: sample-lex.xml
 
   Windowsの メモ帳から作成する場合、コードを貼り付けたあと、[ファイル＞名前をつけて保存]を選び、開いたウィンドウ下部の[文字コード]から[UTF-8]
 
@@ -35,14 +35,14 @@ Step4: 対話システムを作ろう
 
   以下のようなテキストデータを作成して下さい。
 
-  sample-en.seatml
+  sample.seatml
   
-  .. literalinclude:: sample-en.seatml	   
+  .. literalinclude:: sample.seatml	   
 
 
 3. 設定ファイルrtc.confの用意
 
-  You may copy the setting used in :doc:`step2`.
+  Step2で使用したものと同等の設定ファイルを用意します。 :doc:`step2`.
 
 テスト手順
 ----------
@@ -53,13 +53,13 @@ Step4: 対話システムを作ろう
 
   ::
   
-  $ juliusrtc sample-en.xml
+  $ juliusrtc sample.xml
 
   SEATコンポーネントは準備2.で用意したスクリプトファイル（sample.seatml）を読み込みます。
 
   ::
 
-  $ seat sample-en.seatml
+  $ seat sample.seatml
 
   RT System Editorのネームサービスビューに起動したコンポーネントが表示されていることを確認します。
 
@@ -69,12 +69,10 @@ Step4: 対話システムを作ろう
 
 3. 各コンポーネントを接続します。
 
-  * ConsoleInとOpenJTalk間のリンクを削除する。
-  * AudioInputの出力ポートとJuliusの入力ポートを接続する。
-  * Juliusの出力ポート“result”とSEATの入力ポート接続する。
-  * SEATの出力ポートとOpenJTalkの入力ポート接続する。
-
-  Make sure that everything is connected!
+  * ConsoleInとOpenJTalk間のリンクを削除します。
+  * AudioInputの出力ポートとJuliusの入力ポートを接続します。
+  * Juliusの出力ポート“result”とSEATの入力ポート接続します。
+  * SEATの出力ポートとOpenJTalkの入力ポート接続します。
 
   .. image:: step4_10.png
 
