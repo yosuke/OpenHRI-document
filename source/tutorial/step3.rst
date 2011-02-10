@@ -24,14 +24,14 @@ Test procedures
 
 1. Start the ConsoleIn and Festival components.
 
-  Open a Terminal and enter each commands
-  ::
+  Open two terminals and enter following commands respectively
+    ::
 
-  % python ConssoleIn.py
+    % python ConsoleIn.py
   
-  ::
+    ::
   
-  % festivalrtc
+    % festivalrtc
 
   Make sure you start naming service view component is displayed.
 

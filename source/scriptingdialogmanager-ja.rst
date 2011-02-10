@@ -5,9 +5,9 @@
 はじめに
 ========
 
-対話マネージャは対話機能を管理する対話システムの中心部です。
+対話マネージャは対話機能を管理する機能を持ち、対話システムの中核となる部分です。
 
-OpenHRIは2つの対話マネージャを用意しています。目的に応じて選択してください。
+OpenHRIは2つの対話マネージャを用意しており、目的に応じて選択することができます（独自の対話マネージャを書くこともできます）。
 
 
 SEAT: シンプルな対話マネージャ
@@ -21,17 +21,17 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
 
 - アダプタの定義
 
-  SEATには、名前と接続メソッド(RTMとソケット)を接続可能にするアダプタ機能を持っています。
-  アダプタ機能は、システムのハードウェア・コンフィギュレーションによらず対話ロジックの利便性を促進します。
+  SEATには、名前と通信方法(RTMとソケット)を対応付けるアダプタ機構を持っています。
+  アダプタ機構は、通信方法の差異を隠蔽化することで、システムのハードウェア構成の変化に適応し、対話ロジックの再利用性を向上させます。
 
   general
-    このタグは、アダプタ定義部を示すのに使用されます。
+    アダプタ定義部を示します。
 
   agent
-    名前と接続メソッドの割り当てを示します。 
+    名前と通信方法の対応を示します。 
     "type"属性は"rtcin"、"rtcout"、"socket"を取ることができます。
-    タイプが"rtcin"か"rtcout"と定義されるとき、"datatype" 属性を定義できます(データ型に関しては、RTMの仕様を参照してください)。
-    タイプが"socket"と定義されるとき、"host" 、"port" 属性を定義できます。
+    タイプが"rtcin"か"rtcout"と定義されたとき、"datatype"属性を定義できます(データ型に関しては、RTMの仕様を参照してください)。
+    タイプが"socket"と定義されたとき、"host" 、"port" 属性を定義できます。
 
 - スクリプト定義
 
@@ -39,7 +39,7 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
     状態遷移モデルで状態を示します。
 
   rule
-    キーワードとコマンドのセットを定義します。
+    キーワードとコマンドの組を定義します。
 
   key
     キーワードを示します。
@@ -64,13 +64,13 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
   
   $ validateseatml [scriptfile]
 
-スクリプトが有効であれば以下のようなメッセージが出力されます。::
+スクリプトが正しい形式で書かれていれば以下のようなメッセージが出力されます。::
   
   $ validateseatml sample-en.seatml
   validating script file sample-en.seatml...
   script file is valid.
 
-スクリプトが正しくないとき、以下のようなエラーメッセージが出力されます。::
+スクリプトの形式が正しくないとき、以下のようなエラーメッセージが出力されます。::
 
   $ validateseatml sample-invalid.seatml
   validating script file sample-invalid.seatml...
@@ -80,8 +80,8 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
 視覚化ツール
 ------------
 
-OpenHRIは、SEATMLスクリプトの構造を有効にするより強力なツールを用意しています。 
-"seatmltographviz"は、スクリプトをグラフ表示させて正当性をチェックするツールです。
+OpenHRIは、SEATMLスクリプトの構造を検証するより強力なツールを用意しています。 
+"seatmltographviz"は、スクリプトをグラフ表示させて構造をチェックするツールです。
 
 以下のコマンドでグラフ描画処理を行います。::
 
@@ -94,8 +94,8 @@ OpenHRIは、SEATMLスクリプトの構造を有効にするより強力なツ�
 Soar: General Artificial Intelligence
 =====================================
 
-Soar ( http://sitemaker.umich.edu/soar/home ) はプロダクションシステムベースのAIで最も人気があるソフトウェアの1つです。
+Soar ( http://sitemaker.umich.edu/soar/home ) はプロダクションシステムベースのAIで最も人気がある実装の1つです。
 
-OpenHRIは、コンポーネントとしてRTMベースのシステムにSoarを埋め込むためのラッパーを提供します。
+OpenHRIは、RTMベースのシステムにコンポーネントとしてSoarを埋め込むためのラッパーを提供します。
 
 More documents T.B.D

@@ -17,7 +17,7 @@ Step3: 音声合成コンポーネントのテスト
 
 2. rtc.confの用意
 
-  Step2で使用したものと同等の設定ファイルを用意します。 :doc:`step2`.
+  :doc:`step2-ja` で使用したものと同等の設定ファイルを用意します。
 
 テスト手順
 ----------
@@ -27,7 +27,7 @@ Step3: 音声合成コンポーネントのテスト
   ターミナルを開き、以下のコマンドを入力します。
   ::
 
-  % python ConssoleIn.py
+  % python ConsoleIn.py
   
   ::
   
@@ -37,7 +37,7 @@ Step3: 音声合成コンポーネントのテスト
 
   .. image:: ss_jtalk01.png
 
-2. RT System EditorにConsoleInコンポーネント、OpenJTalkコンポーネントを配置します。
+2. RT-SystemEditorにConsoleInコンポーネント、OpenJTalkコンポーネントを配置します。
 
   ドラッグ＆ドロップでエディタに配置します。
 
@@ -67,5 +67,4 @@ Step3: 音声合成コンポーネントのテスト
 
 次は、音声認識コンポーネントと接続することで簡単な対話システムを作ってみましょう。
 
-Proceed to :doc:`step4`.
-
+:doc:`step4-ja` へ

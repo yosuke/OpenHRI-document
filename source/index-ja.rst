@@ -20,6 +20,7 @@ Contents:
    openhriaudio-ja
    openhrivoice-ja
    seatsat-ja
+   openhriweb-ja
    examples-ja
 
 

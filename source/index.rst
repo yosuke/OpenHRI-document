@@ -25,6 +25,7 @@ Contents:
    openhriaudio
    openhrivoice
    seatsat
+   openhriweb
    examples
 
 
