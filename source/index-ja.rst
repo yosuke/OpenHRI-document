@@ -22,6 +22,7 @@ Contents:
    seatsat-ja
    openhriweb-ja
    examples-ja
+   license-ja
 
 
 .. Indices and tables

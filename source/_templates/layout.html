@@ -1,0 +1,32 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{%- if not embedded %}
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+</style>
+{%- endif %}
+{% endblock %}
+
+{% block rootrellink %}
+        <li><a href="http://openhri.net/">Home</a>{{ reldelim2 }}</li>
+        <li><a href="{{ pathto('index') }}">English</a>{{ reldelim2 }}</li>
+        <li><a href="{{ pathto('index-ja') }}">日本語</a>
+          &raquo;</li>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-52641-5");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+{% endblock %}

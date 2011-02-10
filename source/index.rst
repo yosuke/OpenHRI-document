@@ -27,6 +27,7 @@ Contents:
    seatsat
    openhriweb
    examples
+   license
 
 
 .. Indices and tables
