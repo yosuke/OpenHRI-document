@@ -11,86 +11,66 @@ OpenHRIは2つの対話マネージャを用意しています。目的に応じ
 
 
 SEAT: シンプルな対話マネージャ
-===========================
+==============================
 
 SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに基づく対話マネージャです。
 以下のXMLタグを使用してシステムの動作を定義することができます。
 
-Tags
+タグ
 ----
 
 - アダプタの定義
 
-
-  SEATには、名前と実際の接続メソッド(RTMとソケット)の間にマッピングを与えるOpenRTMやソケット通信と接続可能なアダプタ機能。
-  アダプタ機能は、システムのハードウェア・コンフィギュレーションを抜き取って、対話論理の再利用を促進します。
-  SEAT has an adaptor mechanism which gives mappings between the name
-  and the actual connection method (RTM and socket). The adaptor
-  mechanism abstracts the hardware configuration of the system and
-  assists the reuse of the dialog logic.
+  SEATには、名前と接続メソッド(RTMとソケット)を接続可能にするアダプタ機能を持っています。
+  アダプタ機能は、システムのハードウェア・コンフィギュレーションによらず対話ロジックの利便性を促進します。
 
   general
     このタグは、アダプタ定義部を示すのに使用されます。
-    This tag is used to indicate the adaptor definition part.
 
   agent
-    名前と実際の接続メソッドの地図。 
+    名前と接続メソッドの割り当てを示します。 
     "type"属性は"rtcin"、"rtcout"、"socket"を取ることができます。
-    タイプが"rtcin"か"rtcout"と定義されるとき、"datatype" 属性を定義できます(標準のデータ型に関するRTMの仕様を見てください)。
+    タイプが"rtcin"か"rtcout"と定義されるとき、"datatype" 属性を定義できます(データ型に関しては、RTMの仕様を参照してください)。
     タイプが"socket"と定義されるとき、"host" 、"port" 属性を定義できます。
-    Map of the name and actual connection method. Attribute "type"
-    can take "rtcin", "rtcout" or "socket". When type is defined as
-    "rtcin" or "rtcout", you can define "datatype" attribute (see RTM's
-    specification for standard data types). When type is defined as
-    "socket", you can define "host" and "port" attributes.
 
 - スクリプト定義
 
   state
     状態遷移モデルで状態を示します。
-    Indicates a state in state-transition model.
 
   rule
     キーワードとコマンドのセットを定義します。
-    Defines set of keywords and commands.
 
   key
-    入力に合わせられるべきキーワード。
-    Keywords to be matched to the inputs.
+    キーワードを示します。
 
   command
-    キーワードが入力に合っていたら実行されると命令してください。
-    Command to be executed when the keyword matches the input.
+    キーワードと入力が一致したとき実行されるコマンドを示します。
 
   statetransition
-    異なった状態へのトランジット。
-    Transit to different state.
+    状態遷移を示します。
 
-Example
--------
+例
+---
 
-.. literalinclude:: sample.seatml
+.. literalinclude:: sample-en.seatml
 
 検証ツール
----------------
+----------
 
-"validateseatml"ツールでは、SEATML形式のスクリプトの検証を行います。
-You can validate your script in SEATML format by using "validateseatml" tool.
+"validateseatml"は、SEATML形式のスクリプトの検証を行うツールです。
 
-検証ツールは以下のコマンドで単純な検証を行うことができます。:
-You can use the validation tool by simply entering the following command::
+検証ツールは以下のコマンドで実行できます。::
   
   $ validateseatml [scriptfile]
 
-スクリプトが有効であれば以下のようなメッセージが出力されます。
-If the script is correct, you will get the following output::
+スクリプトが有効であれば以下のようなメッセージが出力されます。::
   
-  $ validateseatml sample.seatml
-  validating script file sample.seatml...
+  $ validateseatml sample-en.seatml
+  validating script file sample-en.seatml...
   script file is valid.
 
-スクリプトが正しくないとき、以下のようなエラーメッセージが出力されます。
-If the script is not correct, you will get error messages for example as follows::
+スクリプトが正しくないとき、以下のようなエラーメッセージが出力されます。::
 
   $ validateseatml sample-invalid.seatml
   validating script file sample-invalid.seatml...
@@ -98,33 +78,24 @@ If the script is not correct, you will get error messages for example as follows
   Element 'transition': This element is not expected. Expected is one of ( command, statetransition )., line 23
 
 視覚化ツール
-------------------
+------------
 
-OpenHRIには、SEATMLスクリプトの構造を有効にする多くの強力なツールがあります。 
-"seatmltographviz"ツールは、スクリプトをグラフ表示させて正当性をチェックできます。
-OpenHRI has more powerful tool to validate the structure of the
-SEATML script.  "seatmltographviz" tool can visualize the script
-in graph to check the correctness.
+OpenHRIは、SEATMLスクリプトの構造を有効にするより強力なツールを用意しています。 
+"seatmltographviz"は、スクリプトをグラフ表示させて正当性をチェックするツールです。
 
-以下のコマンドでグラフ描画できます。
-To draw the graph, enter following command::
+以下のコマンドでグラフ描画処理を行います。::
 
-  $ seatmltographviz sample.seatml | dot -Txlib
+  $ seatmltographviz sample-en.seatml | dot -Txlib
 
-以下ようなグラフが表示できます。
-For example, you will get the following output:
+以下のような画像が出力されます。:
 
   .. image:: sample-script.png
 
 Soar: General Artificial Intelligence
 =====================================
 
-Soar ( http://sitemaker.umich.edu/soar/home ) はプロダクションシステムベースのAIがわかる最も人気があるソフトウェアの1つです。
-Soar ( http://sitemaker.umich.edu/soar/home ) is one of the most
-popular software to realize production system based AI.
+Soar ( http://sitemaker.umich.edu/soar/home ) はプロダクションシステムベースのAIで最も人気があるソフトウェアの1つです。
 
-OpenHRIは、コンポーネントとしてRTMベースのシステムにSoarを埋め込むためにラッパーを提供します。
-OpenHRI provides a wrapper to embed Soar into RTM based systems as a
-component.
+OpenHRIは、コンポーネントとしてRTMベースのシステムにSoarを埋め込むためのラッパーを提供します。
 
 More documents T.B.D

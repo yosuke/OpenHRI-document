@@ -1,88 +1,81 @@
----------------------------------------
-Working with Speech Recognition Grammar
----------------------------------------
+----------------------
+音声認識文法の作成方法
+----------------------
 
-Introduction
-============
+はじめに
+========
 
-Speech recognition grammar defines syntactical structure of the words
-to be recognized.
+音声認識文法は、認識される単語の構造を定義します。
 
-Julius speech recognition component provided by OpenHRI uses W3C-SRGS
-format to define the speech recognition grammar.
+OpenHRIの音声認識コンポーネントJuliusは、W3C-SRGS形式を使用して音声認識文法を定義しています。
 
-In this section, we explain the W3C-SRGS format and introduce the
-tools provided by OpenHRI to help authoring the grammar.
+ここでは、OpenHRIで用意しているW3C-SRGS書式の音声認識文法作成用のツールを説明します。
 
-W3C-SRGS Grammar
-================
+W3C-SRGS音声認識分法
+====================
 
-W3C-SRGS (Speech Recognition Grammar Specification) is one of the
-standard to define the speech recognition grammar. It uses XML format
-with following tags to 
+W3C-SRGS(Speech Recognition Grammar Specification)は音声認識文法を定義する規格の1つです。
+使用するXML形式のタグを以下に示します。
 
-Tags
+タグ
 ----
 
 lexicon
-  Indicates URI of W3C-PLS lexicon (see next section). Required for
-  every grammar.
+  W3C-PLS辞書(次のセクション)のURIを示します。 必須項目。
 
 rule
-  Indicates set of grammar distinguished by an ID. This will be
-  used to reference the grammar from the other grammar or to switch
-  the active grammar recognized by the Julius speech recognition
-  component.
+  IDによって区別された文法のセットを示します。
+  別の音声認識文法の参照や、Julius音声認識コンポーネントによって認識されたアクティブな文法を
+  切り換えるのに利用できます。
 
 item
-  Indicates a word or a sentence (space separated words) to be
-  recognized.
+  認識される言葉や文章を示します。
 
 one-of
-  Indicates the child items are all acceptable.
+  子項目がすべて許容できることを示します。
 
-Example
--------
+例
+---
 
 .. literalinclude:: sample-en.grxml
 
-W3C-PLS Lexicon
-===============
+W3C-PLS音声認識辞書
+===================
 
-W3C-PLS (Pronunciation Lexicon Specification) is one of the
-standard to define the speech recognition lexicon. It uses XML format
-with following tags to 
+W3C-PLS(Pronunciation Lexicon Specification)は音声認識辞書を定義する規格の1つです。
+次のタグがあるXML形式を使用します。
 
-Tags
+タグ
 ----
 
 lexeme
-  Set of grapheme and phoneme.
+  書記素と音素のセットを示します。
 
 grapheme
-  Indicates how you write the word.
+  単語の書式を示します。
 
 phoneme
-  Indicates how you pronounce the word.
+  単語の発音を示します。
 
-Example
--------
+例
+---
 
 .. literalinclude:: sample-lex-en.xml
 
 Tools
 =====
 
-Validation tool
----------------
 
-You can validate your grammar in W3C-SRGS format by using "validatesrgs" tool.
+検証ツール
+----------
 
-You can use the validation tool by simply entering the following command::
+"validatesrgs"はW3C-SRGS形式の文法を検証することができるツールです。
+
+検証ツールは以下のコマンドで実行できます。::
   
   $ validatesrgs [grammarfile]
 
-If the grammar is correct, you will get the following output::
+スクリプトが有効であれば以下のようなメッセージが出力されます。::
   
   $ validatesrgs sample-en.grxml
   Validating SRGS file sample-en.grxml...
@@ -90,46 +83,39 @@ If the grammar is correct, you will get the following output::
   Validating PLS file sample-lex-en.xml...
   PLS file is valid.
 
-If the grammar is not correct, you will get error messages for example as follows::
+スクリプトが正しくないとき、以下のようなエラーメッセージが出力されます。::
 
   $ validatesrgs sample-invalid.grxml
   Validating SRGS file sample-invalid.grxml...
   [error] Invalid SRGS file.
   Element '{http://www.w3.org/2001/06/grammar}one-of': Missing child element(s). Expected is ( {http://www.w3.org/2001/06/grammar}item )., line 12
 
-Visualization tool
-------------------
+視覚化ツール
+------------
 
-OpenHRI has more powerful tool to validate the structure of the
-W3C-SRGS grammar.  "juliustographviz" tool can visualize the grammar
-in graph to check the correctness.
+OpenHRIは、W3C-SRGS書式を有効にするより強力なツールを用意しています。 
+"juliustographviz"は、音声認識文法をグラフ表示させて正当性をチェックするツールです。
 
-To draw the graph, enter following command::
+以下のコマンドでグラフ描画処理を行います。::
 
   $ srgstojulius sample-en.grxml | juliustographviz | dot -Txlib
 
-For example, you will get the following output:
+以下のような画像が出力されます。:
 
   .. image:: sample-grammar.png
-
 
 Lexicon generation tool
 -----------------------
 
-After you have finished writing W3C-SRGS grammar, you also have to
-prepare W3C-PLS lexicon.
+W3C-SRGS音声認識文法の作成を終えたら、W3C-PLS辞書を用意します。
 
-OpenHRI provides a tool to automatically generate W3C-PLS lexicon from
-the W3C-SRGS grammar.
+OpenHRIは、W3C-SRGS文法からW3C-PLS辞書を自動的に生成するツールを用意しました。
 
-The "srgstopls" tool can be used as follows::
+"srgstopls"ツールは以下のコマンドで実行できます。::
   
   $ srgstopls sample-en.grxml > sample-lex-en.xml
 
-English lexicon (by using julius-voxforge dictionary) and Japanese
-lexicon (by using julius-runkit dictionary) are supported by this tool
-at the moment.
+このツールは現在、英語辞書(julius-voxforge辞書を使用するのによる)と日本語辞書(julius-runkit辞書を使用するのによる)をサポートしています。
 
-.. note:: Words not in the dictionary remains blank in output XML
-   file. You should always check the output XML and fill in manually
-   for such words.
+.. note:: 単語は出力XMLファイルの辞書の空欄には追加されません。出力XMLのチェックを行い、手動で単語を登録してください。
+
