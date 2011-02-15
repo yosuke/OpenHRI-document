@@ -2,7 +2,21 @@
 Installation procedure for Ubuntu
 ---------------------------------
 
-Installation of pre-built packages:
+Command-line based installation (recommended)
+---------------------------------------------
+
+Enter following commands on the terminal::
+
+  $ sudo apt-add-repository ppa:openhri/ppa
+  $ sudo apt-get update
+  $ sudo apt-get install openhriaudio openhrivoice seatsat
+
+This is it!
+
+Proceed to :doc:`step2`.
+
+GUI based installation
+----------------------
 
 OpenHRI software repository can be registered using the Synaptic Package Manager.
 

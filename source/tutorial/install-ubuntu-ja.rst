@@ -2,7 +2,22 @@
 Ubuntuへのインストール
 ----------------------
 
-ビルド済みパッケージのインストール方法：
+コマンドラインを使ったインストール（推奨）
+------------------------------------------
+
+ターミナルを開いて以下のコマンドを入力してください::
+
+  $ sudo apt-add-repository ppa:openhri/ppa
+  $ sudo apt-get update
+  $ sudo apt-get install openhriaudio openhrivoice seatsat
+
+インストールに必要な作業はこれだけです。
+
+:doc:`step2-ja` へ
+
+
+GUIを使ったインストール
+-----------------------
 
 OpenHRIソフトウェアのリポジトリを登録しておくことで、Synapticパッケージマネージャで最新のソフトウェアが導入ができるようになります。
 
