@@ -22,11 +22,12 @@ Contents:
    tutorial/index
    workingwithgrammar
    scriptingdialogmanager
+   audiofilter
+   examples/index
    openhriaudio
    openhrivoice
    seatsat
    openhriweb
-   examples
    license
 
 

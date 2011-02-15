@@ -17,11 +17,12 @@ Contents:
    tutorial/index-ja
    workingwithgrammar-ja
    scriptingdialogmanager-ja
+   audiofilter-ja
+   examples/index-ja
    openhriaudio-ja
    openhrivoice-ja
    seatsat-ja
    openhriweb-ja
-   examples-ja
    license-ja
 
 
