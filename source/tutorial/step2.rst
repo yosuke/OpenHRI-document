@@ -7,7 +7,11 @@ In this step, we will directly connect the audio input and the audio output comp
 Preparation
 -----------
 
-1. Download and install eclipse with RT-SystemEditor (please see here for the instructions).
+1. Download and install eclipse with RT-SystemEditor.
+
+   a. On Ubuntu, please refer to the instruction on this page: http://openrtm.org/openrtm/en/node/945
+
+   b. On Windows, please download and install the OpenRTM-aist-Python package provided from this page: http://openrtm.org/openrtm/en/node/949#toc3 
 
 2. Prepare a microphone and a speaker (earphone and headphone) connect to PC.
 
@@ -15,10 +19,9 @@ Preparation
 
   Create a configuration file “rtc.conf” and save to working directory. Content of rtc.conf is as follows
 
-  .. code-block:: guess  
+  .. literalinclude:: rtc.conf
 
-     corba.nameservers: localhost:9876
-     naming.formats: %n.rtc
+  On Windows, rtc.conf file is alread allocated by the installer.
 
 4. Launch the name server.
 
@@ -31,10 +34,10 @@ Preparation
 
 5. Launch eclipse with RT-SystemEditor installed.
 
-Basic usage of the RT System Editor
+Basic usage of the RT-SystemEditor
 -----------------------------------
 
-In this section, we describes the basic usage of the RT System Editor and test audio components.
+In this section, we describes the basic usage of the RT-SystemEditor and test audio components.
 
 1. Launch AudioInput and AudioOutput components.
 

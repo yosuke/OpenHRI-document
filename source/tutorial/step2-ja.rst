@@ -9,7 +9,11 @@ Step2: RTSystemEditorの使い方と音声入出力コンポーネントのテ�
 準備
 ----
 
-1. RT System Editorがインストールされたeclipseをダウンロードしてインストールします。(こちら http://www.openrtm.org/ を参照して下さい)
+1. RT-SystemEditorが組み込まれたeclipseをインストールします。
+
+   a. Ubuntuの場合、このページに書かれた手順に従ってください: http://openrtm.org/openrtm/en/node/945
+
+   b. Windowsの場合、このページからダウンロードできるOpenRTM-aist-Pythonパッケージをインストールしてください: http://openrtm.org/openrtm/ja/node/932#toc3
 
 2. マイクとスピーカ（イヤホン、ヘッドフォン）を用意し、PCと接続します。
 
@@ -17,26 +21,25 @@ Step2: RTSystemEditorの使い方と音声入出力コンポーネントのテ�
 
   RTCコンフィギュレーションファイル “rtc.conf” を作成します。作業ディレクトリ に、次のような内容のテキストファイル“rtc.conf” を作成し配置してください。
 
-  .. code-block:: guess  
+  .. literalinclude:: rtc.conf
 
-     corba.nameservers: localhost:9876
-     naming.formats: %n.rtc
+  Windowsの場合、rtc.confはインストーラが自動で作成してくれます。
 
-4. ネームサーバーを立ち上げます。
+4. ネームサーバを立ち上げます。
 
-  rtc.confファイルでポートナンバーを指定したときは、指定したポートナンバーでネームサーバーを起動します。（上記の例なら9876）
+  rtc.confファイルでポート番号を指定したときは、指定したポート番号でネームサーバを起動します。（上記の例なら9876）
   ::
   
   $ rtm-naming 9876
 
    .. image:: ss_run011.png
 
-5. RT System Editorを立ち上げます。
+5. RT-SystemEditorを立ち上げます。
 
-RT System Editorの基本的な使い方
---------------------------------
+RT-SystemEditorの基本的な使い方
+-------------------------------
 
-音声入出力コンポーネントの起動とRT System Editorの基本的な使用方法を説明します。
+音声入出力コンポーネントの起動とRT-SystemEditorの基本的な使用方法を説明します。
 
 1. AudioInputコンポーネントおよびAudioOutputコンポーネントを立ち上げます。
 
@@ -64,13 +67,13 @@ RT System Editorの基本的な使い方
      
      $ portaudiooutput
 
-2. RT System Editorを開きます。
+2. RT-SystemEditorを開きます。
 
    .. image:: ss_run03.png
 
    .. image:: ss_run04.png
 
-3. ネームサービス内の「ネームサーバーを追加」を選択してrtc.confファイルで指定したネームサーバーを登録します。
+3. ネームサービス内の「ネームサーバを追加」を選択してrtc.confファイルで指定したネームサーバを登録します。
 
    （上記の例なら　localhost:9876）
 
@@ -121,6 +124,6 @@ RT System Editorの基本的な使い方
 
    マイクに音声を入力してスピーカに音声が流れることを確認します。
 
-Step２ではオーディオコンポーネントのテストからRT System Editorの基本的な使用方法を説明しました。
+Step2ではオーディオコンポーネントのテストからRT-SystemEditorの基本的な使い方を説明しました。
 
 :doc:`step3-ja` へ
