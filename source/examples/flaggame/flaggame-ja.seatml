@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seatml>
+  <general name="flaggame">
+    <agent name="speechin" type="rtcin" datatype="TimedString" />
+    <agent name="speechout" type="rtcout" datatype="TimedString" />
+  </general>
+  <state name="both_down">
+    <rule>
+      <key>赤あげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>left_up</statetransition>
+    </rule>
+    <rule>
+      <key>白あげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>right_up</statetransition>
+    </rule>
+  </state>
+  <state name="both_up">
+    <rule>
+      <key>赤さげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>right_up</statetransition>
+    </rule>
+    <rule>
+      <key>白さげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>left_up</statetransition>
+    </rule>
+  </state>
+  <state name="left_up">
+    <rule>
+      <key>赤さげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>both_down</statetransition>
+    </rule>
+    <rule>
+      <key>白あげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>both_up</statetransition>
+    </rule>
+  </state>
+  <state name="right_up">
+    <rule>
+      <key>赤あげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>both_up</statetransition>
+    </rule>
+    <rule>
+      <key>白さげて</key>
+      <command host="speechout">はい</command>
+      <statetransition>both_down</statetransition>
+    </rule>
+  </state>
+</seatml>

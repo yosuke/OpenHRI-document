@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lexicon version="1.0"
+         xmlns="http://www.w3.org/2005/01/pronunciation-lexicon"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon
+                             http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
+         alphabet="x-kana" xml:lang="jp">
+  <lexeme>
+    <grapheme>赤</grapheme>
+    <phoneme>{{KANA|あか}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>白</grapheme>
+    <phoneme>{{KANA|しろ}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>あげて</grapheme>
+    <phoneme>{{KANA|あげて}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>あげない</grapheme>
+    <phoneme>{{KANA|あげない}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>さげて</grapheme>
+    <phoneme>{{KANA|さげて}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>さげない</grapheme>
+    <phoneme>{{KANA|さげない}}</phoneme>
+  </lexeme>
+</lexicon>
