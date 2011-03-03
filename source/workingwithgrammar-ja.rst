@@ -32,15 +32,18 @@ rule
   切り換えるのに利用します。
 
 item
-  認識される単語や文を定義します。
+  認識される単語や文を定義します。repeatプロパティで繰り替えされる回数を指定できます。
 
 one-of
   子項目で定義される文法がすべて許容できることを示します。
 
+ruleref
+  uriで指定される文法を参照します。
+
 例
 ---
 
-.. literalinclude:: sample-en.grxml
+.. literalinclude:: sample-jp.grxml
 
 W3C-PLS音声認識辞書
 ===================
@@ -63,7 +66,7 @@ phoneme
 例
 ---
 
-.. literalinclude:: sample-lex-en.xml
+.. literalinclude:: sample-lex-jp.xml
 
 ツール
 ======
@@ -105,10 +108,10 @@ OpenHRIは、W3C-SRGS形式の文法を検証するより強力なツールを�
 
 以下のような画像が出力されます。:
 
-  .. image:: sample-grammar.png
+  .. image:: sample-grammar-ja.png
 
-Lexicon generation tool
------------------------
+単語辞書生成ツール
+------------------
 
 W3C-SRGS音声認識文法の作成が終わったら、W3C-PLS辞書も用意しなければなりません。
 

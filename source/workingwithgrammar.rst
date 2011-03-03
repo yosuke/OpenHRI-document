@@ -36,10 +36,13 @@ rule
 
 item
   Indicates a word or a sentence (space separated words) to be
-  recognized.
+  recognized. "repeat" property can be used.
 
 one-of
   Indicates the child items are all acceptable.
+
+ruleref
+  Import the rule defined by the uri.
 
 Example
 -------
@@ -110,7 +113,7 @@ To draw the graph, enter following command::
 
 For example, you will get the following output:
 
-  .. image:: sample-grammar.png
+  .. image:: sample-grammar-en.png
 
 
 Lexicon generation tool

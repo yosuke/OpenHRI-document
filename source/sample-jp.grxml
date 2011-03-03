@@ -3,10 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
                              http://www.w3.org/TR/speech-grammar/grammar.xsd"
-         xml:lang="en"
+         xml:lang="jp"
          version="1.0" mode="voice" root="main">
 
-  <lexicon uri="sample-lex-en.xml"/>
+  <lexicon uri="sample-lex-jp.xml"/>
 
   <rule id="main">
     <one-of>
@@ -17,26 +17,26 @@
 
   <rule id="greet">
     <one-of>
-      <item>hello</item>
-      <item>good afternoon</item>
-      <item>good evening</item>
-      <item>good bye</item>
-      <item>bye</item>
+      <item>おはよう</item>
+      <item>こんにちは</item>
+      <item>こんばんは</item>
+      <item>さようなら</item>
     </one-of>
   </rule>
 
   <rule id="command">
+    <item repeat="0-1">その</item>
     <one-of>
-      <item>pick</item>
-      <item>give me</item>
+      <item>りんご</item>
+      <item>ケーキ</item>
+      <item>リモコン</item>
     </one-of>
-    <item repeat="0-1">the</item>
+    <item>を</item>
     <one-of>
-      <item>apple</item>
-      <item>cake</item>
-      <item>remote</item>
+      <item>取って</item>
+      <item>渡して</item>
     </one-of>
-    <item repeat="0-1">please</item>
+    <item repeat="0-1">ください</item>
   </rule>
 
 </grammar>

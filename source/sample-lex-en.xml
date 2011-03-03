@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lexicon version="1.0"
-         xmlns="http://www.w3.org/2005/01/pronunciation-lexicon"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon
-                             http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
-         alphabet="x-ARPAbet" xml:lang="en">
+     xmlns="http://www.w3.org/2005/01/pronunciation-lexicon"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.w3.org/2005/01/pronunciation-lexicon
+                         http://www.w3.org/TR/2007/CR-pronunciation-lexicon-20071212/pls.xsd"
+     alphabet="x-ARPAbet" xml:lang="en">
   <lexeme>
-    <grapheme>evening</grapheme>
-    <phoneme>{{X-ARPABET|iy v n ix ng}}</phoneme>
+    <grapheme>me</grapheme>
+    <phoneme>{{x-ARPAbet|m iy}}</phoneme>
   </lexeme>
   <lexeme>
     <grapheme>good</grapheme>
-    <phoneme>{{X-ARPABET|g uh d}}</phoneme>
+    <phoneme>{{x-ARPAbet|g uh d}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>remote</grapheme>
+    <phoneme>{{x-ARPAbet|r ix m ow t}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>apple</grapheme>
+    <phoneme>{{x-ARPAbet|ae p ax l}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>give</grapheme>
+    <phoneme>{{x-ARPAbet|g ih v}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>please</grapheme>
+    <phoneme>{{x-ARPAbet|p l iy z}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>evening</grapheme>
+    <phoneme>{{x-ARPAbet|iy v n ix ng}}</phoneme>
   </lexeme>
   <lexeme>
     <grapheme>afternoon</grapheme>
-    <phoneme>{{X-ARPABET|ae f t er n uw n}}</phoneme>
+    <phoneme>{{x-ARPAbet|ae f t er n uw n}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>pick</grapheme>
+    <phoneme>{{x-ARPAbet|p ih k}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>cake</grapheme>
+    <phoneme>{{x-ARPAbet|k ey k}}</phoneme>
+  </lexeme>
+  <lexeme>
+    <grapheme>the</grapheme>
+    <phoneme>{{x-ARPAbet|dh ax}}</phoneme>
   </lexeme>
   <lexeme>
     <grapheme>bye</grapheme>
-    <phoneme>{{X-ARPABET|b ay}}</phoneme>
+    <phoneme>{{x-ARPAbet|b ay}}</phoneme>
   </lexeme>
   <lexeme>
     <grapheme>hello</grapheme>
-    <phoneme>{{X-ARPABET|hh ax l ow}}</phoneme>
+    <phoneme>{{x-ARPAbet|hh ax l ow}}</phoneme>
   </lexeme>
 </lexicon>
