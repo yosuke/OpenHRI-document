@@ -15,7 +15,6 @@
 	  <item>左</item>
 	  <item>右</item>
 	</one-of>
-	<item repeat="0-1">へ</item>
       </item>
       <item>
 	<one-of>

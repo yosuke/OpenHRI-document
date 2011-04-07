@@ -9,6 +9,7 @@ Edit the script given to the dialog manager as follows.
   sample-en2.seatml	   
 
   .. literalinclude:: sample-en2.seatml
+     :language: xml
 
 Stop the SEAT components (by entering Ctrl + C in the terminal) and start again with the edited script.
 

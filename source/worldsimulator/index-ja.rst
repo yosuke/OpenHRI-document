@@ -82,9 +82,11 @@ moveHandXY [X] [Y]
 1. 音声認識文法
 
   .. literalinclude:: blocksworld-ja.grxml
+     :language: xml
 
 2. 対話スクリプト
 
   .. literalinclude:: blocksworld.seatml
+     :language: xml
 
 それぞれのファイルをJuliusコンポーネントとSEATコンポーネントに読み込ませ、SEATコンポーネントの「command」ポートとBlocksWorldコンポーネントの「command」ポートを接続してください。

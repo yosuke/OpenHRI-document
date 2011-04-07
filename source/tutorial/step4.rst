@@ -11,11 +11,12 @@ Preparation
 
   We have to provide a speech recognition grammar to run the speech recognition component.
 
-  Create the following two text data.
+  Create the following text data.
 
   sample-en.xml
 
   .. literalinclude:: sample-en.xml
+     :language: xml
 
 
 2. Dialog Manager component preparation
@@ -25,6 +26,7 @@ Preparation
   sample-en.seatml
   
   .. literalinclude:: sample-en.seatml	   
+     :language: xml
 
 
 3. Prepare the setting file rtc.conf

@@ -10,6 +10,7 @@ Step5: 対話システムを外部に接続しよう
   sample2.seatml	   
 
   .. literalinclude:: sample2.seatml
+     :language: xml
 
 SEATコンポーネントを起動している端末をCtrl+Cなどで停止させて、編集したスクリプトファイルを引数に与えて再度起動します。
   ::
