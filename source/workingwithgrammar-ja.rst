@@ -44,6 +44,7 @@ ruleref
 ---
 
 .. literalinclude:: sample-jp.grxml
+   :language: xml
 
 W3C-PLS音声認識辞書
 ===================
@@ -67,6 +68,7 @@ phoneme
 ---
 
 .. literalinclude:: sample-lex-jp.xml
+   :language: xml
 
 ツール
 ======

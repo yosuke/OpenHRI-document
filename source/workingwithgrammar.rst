@@ -48,6 +48,7 @@ Example
 -------
 
 .. literalinclude:: sample-en.grxml
+   :language: xml
 
 W3C-PLS Lexicon
 ===============
@@ -72,6 +73,7 @@ Example
 -------
 
 .. literalinclude:: sample-lex-en.xml
+   :language: xml
 
 Tools
 =====

@@ -54,6 +54,7 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
 ---
 
 .. literalinclude:: sample-en.seatml
+   :language: xml
 
 検証ツール
 ----------

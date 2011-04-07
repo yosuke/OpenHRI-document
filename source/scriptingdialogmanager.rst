@@ -61,6 +61,7 @@ Example
 -------
 
 .. literalinclude:: sample-en.seatml
+   :language: xml
 
 Validation tool
 ---------------
