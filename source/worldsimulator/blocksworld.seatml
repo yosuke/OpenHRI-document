@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seatml>
+  <general name="sample">
+    <agent name="speechin" type="rtcin" datatype="TimedString" />
+    <agent name="command" type="rtcout" datatype="TimedString" />
+  </general>
+  <state name="OPEN">
+    <rule>
+      <key>取って</key>
+      <key>pick it</key>
+      <command host="command">grasp</command>
+    </rule>
+    <rule>
+      <key>置いて</key>
+      <key>place it</key>
+      <command host="command">release</command>
+    </rule>
+    <rule>
+      <key>緑[の箱]</key>
+      <key>green [box]</key>
+      <command host="command">moveHandToBox box1</command>
+    </rule>
+    <rule>
+      <key>赤[の箱]</key>
+      <key>red [box]</key>
+      <command host="command">moveHandToBox box2</command>
+    </rule>
+    <rule>
+      <key>青[の箱]</key>
+      <key>blue [box]</key>
+      <command host="command">moveHandToBox box3</command>
+    </rule>
+    <rule>
+      <key>前</key>
+      <key>forward</key>
+      <command host="command">moveHandXY 0.1 0.0</command>
+    </rule>
+    <rule>
+      <key>後</key>
+      <key>back</key>
+      <command host="command">moveHandXY -0.1 0.0</command>
+    </rule>
+    <rule>
+      <key>左</key>
+      <key>left</key>
+      <command host="command">moveHandXY 0.0 0.1</command>
+    </rule>
+    <rule>
+      <key>右</key>
+      <key>right</key>
+      <command host="command">moveHandXY 0.0 -0.1</command>
+    </rule>
+    <rule>
+      <key>少し前</key>
+      <key>little more forward</key>
+      <command host="command">moveHandXY 0.05 0.0</command>
+    </rule>
+    <rule>
+      <key>少し後</key>
+      <key>little more back</key>
+      <command host="command">moveHandXY -0.05 0.0</command>
+    </rule>
+    <rule>
+      <key>少し左</key>
+      <key>little more left</key>
+      <command host="command">moveHandXY 0.0 0.05</command>
+    </rule>
+    <rule>
+      <key>少し右</key>
+      <key>little more right</key>
+      <command host="command">moveHandXY 0.0 -0.05</command>
+    </rule>
+  </state>
+</seatml>

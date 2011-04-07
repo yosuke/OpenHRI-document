@@ -104,7 +104,7 @@ OpenHRIは、W3C-SRGS形式の文法を検証するより強力なツールを�
 
 以下のコマンドでグラフ描画処理を行います。::
 
-  $ srgstojulius sample-en.grxml | juliustographviz | dot -Txlib
+  $ srgstojulius sample-jp.grxml | juliustographviz | dot -Txlib
 
 以下のような画像が出力されます。:
 
@@ -119,9 +119,9 @@ OpenHRIは、W3C-SRGS文法からW3C-PLS辞書を自動的に生成するツー�
 
 "srgstopls"ツールは以下のコマンドで実行できます。::
   
-  $ srgstopls sample-en.grxml > sample-lex-en.xml
+  $ srgstopls sample-jp.grxml > sample-lex-jp.xml
 
-このツールは現在、英語辞書(julius-voxforge辞書を使用するのによる)と日本語辞書(julius-runkit辞書を使用するのによる)をサポートしています。
+このツールは現在、英語読み(julius-voxforge辞書を使用)と日本語読み(julius-runkit辞書を使用)をサポートしています。
 
 .. note:: 辞書に含まれない単語は出力XMLファイルの該当個所が空欄になります。出力されたXMLファイルは必ずチェックし、空欄箇所には手動で単語を登録してください。
 

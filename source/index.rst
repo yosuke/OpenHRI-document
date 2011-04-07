@@ -22,6 +22,7 @@ Contents:
    tutorial/index
    workingwithgrammar
    scriptingdialogmanager
+   worldsimulator/index
    audiofilter
    examples/index
    openhriaudio

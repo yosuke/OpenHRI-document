@@ -17,10 +17,6 @@ Preparation
 
   .. literalinclude:: sample-en.xml
 
-  sample-lex-en.xml
-
-  .. literalinclude:: sample-lex-en.xml
-
 
 2. Dialog Manager component preparation
 

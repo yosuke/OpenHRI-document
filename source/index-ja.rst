@@ -17,6 +17,7 @@ Contents:
    tutorial/index-ja
    workingwithgrammar-ja
    scriptingdialogmanager-ja
+   worldsimulator/index-ja
    audiofilter-ja
    examples/index-ja
    openhriaudio-ja

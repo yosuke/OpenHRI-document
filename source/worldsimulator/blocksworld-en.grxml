@@ -3,12 +3,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.w3.org/2001/06/grammar
                              http://www.w3.org/TR/speech-grammar/grammar.xsd"
-         xml:lang="jp"
+         xml:lang="en"
          version="1.0" mode="voice" root="command">
   <rule id="command">
     <one-of>
-      <item>こんにちは</item>
-      <item>さようなら</item>
+      <item>
+	<item repeat="0-1">little more</item>
+	<one-of>
+	  <item>front</item>
+	  <item>back</item>
+	  <item>left</item>
+	  <item>right</item>
+	</one-of>
+      </item>
+      <item>
+	<one-of>
+	  <item>red</item>
+	  <item>blue</item>
+	  <item>green</item>
+	</one-of>
+	<item repeat="0-1">box</item>
+      </item>
+      <item>pick it</item>
+      <item>put it</item>
     </one-of>
   </rule>
 </grammar>

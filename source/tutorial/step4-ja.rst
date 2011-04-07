@@ -17,10 +17,6 @@ Step4: 対話システムを作ろう
 
   .. literalinclude:: sample.xml
 
-  sample-lex.xml
-
-  .. literalinclude:: sample-lex.xml
-
   Windowsの メモ帳から作成する場合、コードを貼り付けたあと、[ファイル＞名前をつけて保存]を選び、開いたウィンドウ下部の[文字コード]から[UTF-8]
 
   を選択して保存してください。
