@@ -6,8 +6,6 @@
          xml:lang="jp"
          version="1.0" mode="voice" root="command">
  
-  <lexicon uri="flaggame-ja-lex.xml"/>
- 
   <rule id="command">
     <one-of>
       <item>赤</item>

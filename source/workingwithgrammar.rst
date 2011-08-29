@@ -25,8 +25,7 @@ Tags
 ----
 
 lexicon
-  Indicates URI of W3C-PLS lexicon (see next section). Required for
-  every grammar.
+  Indicates URI of W3C-PLS lexicon (see next section). Optional.
 
 rule
   Indicates set of grammar distinguished by an ID. This will be
@@ -121,8 +120,9 @@ For example, you will get the following output:
 Lexicon generation tool
 -----------------------
 
-After you have finished writing W3C-SRGS grammar, you also have to
-prepare W3C-PLS lexicon.
+After you have finished writing W3C-SRGS grammar, you sometime have to
+prepare W3C-PLS lexicon (this process is required when you have
+designed a grammar which contains words with special readings).
 
 OpenHRI provides a tool to automatically generate W3C-PLS lexicon from
 the W3C-SRGS grammar.

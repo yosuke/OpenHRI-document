@@ -102,7 +102,7 @@ moveHandXY [X] [Y]
 
 2. 対話スクリプト
 
-  .. literalinclude:: blocksworld.seatml
+  .. literalinclude:: blocksworld-ja.seatml
      :language: xml
 
 それぞれのファイルをJuliusコンポーネントとSEATコンポーネントに読み込ませ、SEATコンポーネントの「command」ポートとBlocksWorldコンポーネントの「command」ポートを接続してください。
