@@ -98,7 +98,7 @@ To draw the graph, enter following command::
 
 For example, you will get the following output:
 
-  .. image:: sample-script.png
+  .. image:: sample-script-en.png
 
 Soar: General Artificial Intelligence
 =====================================

@@ -53,7 +53,7 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
 例
 ---
 
-.. literalinclude:: sample-en.seatml
+.. literalinclude:: sample-jp.seatml
    :language: xml
 
 検証ツール
@@ -67,8 +67,8 @@ SEAT (Speech Event Action Transfer) はシンプルな状態遷移モデルに�
 
 スクリプトが正しい形式で書かれていれば以下のようなメッセージが出力されます。::
   
-  $ validateseatml sample-en.seatml
-  validating script file sample-en.seatml...
+  $ validateseatml sample-jp.seatml
+  validating script file sample-jp.seatml...
   script file is valid.
 
 スクリプトの形式が正しくないとき、以下のようなエラーメッセージが出力されます。::
@@ -86,11 +86,11 @@ OpenHRIは、SEATMLスクリプトの構造を検証するより強力なツー�
 
 以下のコマンドでグラフ描画処理を行います。::
 
-  $ seatmltographviz sample-en.seatml | dot -Txlib
+  $ seatmltographviz sample-jp.seatml | dot -Txlib
 
 以下のような画像が出力されます。:
 
-  .. image:: sample-script.png
+  .. image:: sample-script-ja.png
 
 Soar: General Artificial Intelligence
 =====================================
