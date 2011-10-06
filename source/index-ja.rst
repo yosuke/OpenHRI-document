@@ -19,6 +19,7 @@ Contents:
    scriptingdialogmanager-ja
    worldsimulator/index-ja
    audiofilter-ja
+   micarray-ja
    examples/index-ja
    openhriaudio-ja
    openhrivoice-ja
