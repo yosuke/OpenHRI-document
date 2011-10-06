@@ -9,13 +9,6 @@ make
 less libresample.a 
 cd ..
 
-apt-get source libfftw3-dev
-cd fftw3-3.2.2/
-./configure --host=i686-pc-mingw32 --with-gcc-arch=prescott --enable-portable-binary --with-our-malloc16 --with-windows-f77-mangling --enable-threads --with-combined-threads --enable-sse2
-make
-ls .libs/
-cd ..
-
 apt-get source portaudio19-dev
 cd portaudio19-19+svn20090620/
 ./configure --host=i686-pc-mingw32

@@ -20,4 +20,18 @@ Components
 
 .. include:: ../../OpenHRIAudio/doc/echocanceler.rst
 
+.. include:: ../../OpenHRIAudio/doc/combfilter.rst
+
+.. include:: ../../OpenHRIAudio/doc/autogaincontrol.rst
+
+.. include:: ../../OpenHRIAudio/doc/dsarray.rst
+
+.. include:: ../../OpenHRIAudio/doc/beamforming.rst
+
+.. include:: ../../OpenHRIAudio/doc/mixer.rst
+
+.. include:: ../../OpenHRIAudio/doc/signalgeneration.rst
+
+.. include:: ../../OpenHRIAudio/doc/wavrecord.rst
+
 

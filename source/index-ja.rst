@@ -24,6 +24,7 @@ Contents:
    openhrivoice-ja
    seatsat-ja
    openhriweb-ja
+   development-ja
    license-ja
 
 
