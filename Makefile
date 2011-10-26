@@ -89,5 +89,10 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
+pdf:
+	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
+	@echo
+	@echo "Build finished. The PDF files are in _build/pdf."
+
 sync:
 	rsync -avz --delete -e ssh build/html/ yosuke@openhri.net:/home/yosuke/openhri.net/doc
